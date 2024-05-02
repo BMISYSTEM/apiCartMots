@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Actividades\ActividadesController;
 use App\Http\Controllers\AsesorioController;
 use App\Http\Controllers\Asociaciones\Controller\AsociacionesController;
 use App\Http\Controllers\Authcontroller;
@@ -10,8 +11,10 @@ use App\Http\Controllers\Empresas\Controller\EmpresaController;
 use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\graficos;
 use App\Http\Controllers\ImagenesController;
+use App\Http\Controllers\Logistica\LogisticaController;
 use App\Http\Controllers\MarcasController;
 use App\Http\Controllers\ModeloController;
+use App\Http\Controllers\Motivos\MotivosController;
 use App\Http\Controllers\NotasController;
 use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\PasarelaController;
@@ -167,7 +170,51 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/indexasociaciones',[AsociacionesController::class,'indexasociaciones']);
     Route::get('/cancelarenviosolicitud',[AsociacionesController::class,'cancelarEnvioSolicitud']);
     Route::get('/aprobarsolicitud',[AsociacionesController::class,'AprobarSolicitud']);
+     /*
+    |--------------------------------------------------------------------------
+    | Actividades
+    |--------------------------------------------------------------------------
+    |
+    | create,consulta todas las actividades 
+    |
+    */
+    Route::post('/createactividad',[ActividadesController::class,'createActividad']);
+    Route::post('/updateactividad',[ActividadesController::class,'updateActividad']);
+    Route::post('/deleteactividad',[ActividadesController::class,'deleteActividad']);
+    Route::post('/findactividad',[ActividadesController::class,'findActividad']);
+    Route::get('/allactividades',[ActividadesController::class,'allActividad']);
+     /*
+    |--------------------------------------------------------------------------
+    | Motivos
+    |--------------------------------------------------------------------------
+    |
+    | create,consulta todas las motivos 
+    |
+    */
+    Route::post('/createmotivos',[MotivosController::class,'createMotivo']);
+    Route::post('/updatemotivos',[MotivosController::class,'updateMotivo']);
+    Route::post('/deletemotivos',[MotivosController::class,'deleteMotivo']);
+    Route::post('/findmotivos',[MotivosController::class,'findMotivo']);
+    Route::get('/allmotivos',[MotivosController::class,'allMotivo']);
+  /*
+    |--------------------------------------------------------------------------
+    | Logistica / movimientos
+    |--------------------------------------------------------------------------
+    |
+    | create,consulta todas las movimientos 
+    |
+    */
+    Route::post('/createmovimiento',[LogisticaController::class,'createMovimiento']);
+    Route::post('/updatemovimiento',[LogisticaController::class,'updateMovimiento']);
+    Route::post('/deletemovimiento',[LogisticaController::class,'deleteMovimiento']);
+    Route::post('/findmovimiento',[LogisticaController::class,'findMovimiento']);
+    Route::get('/allmovimiento',[LogisticaController::class,'allMovimientos']);
 });
+
+
+
+
+
 Route::post('/codigo/empresa',[Authcontroller::class,'codigoempresa']);
 Route::post('/empresa/registro',[Authcontroller::class,'registroempresa']);
 Route::post('/login',[Authcontroller::class,'login']);

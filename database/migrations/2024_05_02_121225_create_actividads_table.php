@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('pdffinancieros', function (Blueprint $table) {
-            $table->string('modelo');
+        Schema::create('actividads', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->foreignId('empresas');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('pdffinancieros', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('actividads');
     }
 };

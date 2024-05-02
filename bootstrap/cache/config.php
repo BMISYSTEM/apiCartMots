@@ -32,10 +32,10 @@
       11 => 'Illuminate\\Mail\\MailServiceProvider',
       12 => 'Illuminate\\Notifications\\NotificationServiceProvider',
       13 => 'Illuminate\\Pagination\\PaginationServiceProvider',
-      14 => 'Illuminate\\Pipeline\\PipelineServiceProvider',
-      15 => 'Illuminate\\Queue\\QueueServiceProvider',
-      16 => 'Illuminate\\Redis\\RedisServiceProvider',
-      17 => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
+      14 => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
+      15 => 'Illuminate\\Pipeline\\PipelineServiceProvider',
+      16 => 'Illuminate\\Queue\\QueueServiceProvider',
+      17 => 'Illuminate\\Redis\\RedisServiceProvider',
       18 => 'Illuminate\\Session\\SessionServiceProvider',
       19 => 'Illuminate\\Translation\\TranslationServiceProvider',
       20 => 'Illuminate\\Validation\\ValidationServiceProvider',
@@ -71,6 +71,7 @@
       'Log' => 'Illuminate\\Support\\Facades\\Log',
       'Mail' => 'Illuminate\\Support\\Facades\\Mail',
       'Notification' => 'Illuminate\\Support\\Facades\\Notification',
+      'Number' => 'Illuminate\\Support\\Number',
       'Password' => 'Illuminate\\Support\\Facades\\Password',
       'Process' => 'Illuminate\\Support\\Facades\\Process',
       'Queue' => 'Illuminate\\Support\\Facades\\Queue',
@@ -196,7 +197,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -281,7 +282,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'cartmots',
+        'database' => 'u506689159_cartmots',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -289,11 +290,11 @@
       array (
         'driver' => 'mysql',
         'url' => NULL,
-        'host' => 'localhost',
+        'host' => 'srv952.hstgr.io',
         'port' => '3306',
-        'database' => 'cartmots',
-        'username' => 'root',
-        'password' => 'Atenea.99',
+        'database' => 'u506689159_cartmots',
+        'username' => 'u506689159_root',
+        'password' => 'Plataformauno1',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -309,11 +310,11 @@
       array (
         'driver' => 'pgsql',
         'url' => NULL,
-        'host' => 'localhost',
+        'host' => 'srv952.hstgr.io',
         'port' => '3306',
-        'database' => 'cartmots',
-        'username' => 'root',
-        'password' => 'Atenea.99',
+        'database' => 'u506689159_cartmots',
+        'username' => 'u506689159_root',
+        'password' => 'Plataformauno1',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -324,11 +325,11 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => 'localhost',
+        'host' => 'srv952.hstgr.io',
         'port' => '3306',
-        'database' => 'cartmots',
-        'username' => 'root',
-        'password' => 'Atenea.99',
+        'database' => 'u506689159_cartmots',
+        'username' => 'u506689159_root',
+        'password' => 'Plataformauno1',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -371,13 +372,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\app',
+        'root' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\app/public',
+        'root' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\app/public',
         'url' => 'https://public.cartmots.com//storage',
         'visibility' => 'public',
         'throw' => false,
@@ -397,7 +398,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\public\\storage' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\app/public',
+      'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\public\\storage' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -436,14 +437,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -508,7 +509,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -575,7 +576,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -654,6 +655,7 @@
       0 => 'web',
     ),
     'expiration' => NULL,
+    'token_prefix' => '',
     'middleware' => 
     array (
       'verify_csrf_token' => 'App\\Http\\Middleware\\VerifyCsrfToken',
@@ -686,7 +688,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -706,9 +708,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\resources\\views',
+      0 => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\framework\\views',
+    'compiled' => false,
   ),
   'dompdf' => 
   array (
@@ -717,10 +719,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\fonts',
-      'font_cache' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\bairo\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back',
+      'font_dir' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\fonts',
+      'font_cache' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\BAYRON~1.MEN\\AppData\\Local\\Temp',
+      'chroot' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -781,6 +783,7 @@
       array (
         'max_chained_job_reporting_depth' => 5,
       ),
+      6 => 'Spatie\\LaravelIgnition\\FlareMiddleware\\AddContext',
       'Spatie\\FlareClient\\FlareMiddleware\\CensorRequestBodyFields' => 
       array (
         'censor_fields' => 
@@ -794,6 +797,11 @@
         'headers' => 
         array (
           0 => 'API-KEY',
+          1 => 'Authorization',
+          2 => 'Cookie',
+          3 => 'Set-Cookie',
+          4 => 'X-CSRF-TOKEN',
+          5 => 'X-XSRF-TOKEN',
         ),
       ),
     ),
@@ -826,12 +834,15 @@
       16 => 'Spatie\\LaravelIgnition\\Solutions\\SolutionProviders\\UndefinedViewVariableSolutionProvider',
       17 => 'Spatie\\LaravelIgnition\\Solutions\\SolutionProviders\\GenericLaravelExceptionSolutionProvider',
       18 => 'Spatie\\LaravelIgnition\\Solutions\\SolutionProviders\\OpenAiSolutionProvider',
+      19 => 'Spatie\\LaravelIgnition\\Solutions\\SolutionProviders\\SailNetworkSolutionProvider',
+      20 => 'Spatie\\LaravelIgnition\\Solutions\\SolutionProviders\\UnknownMysql8CollationSolutionProvider',
+      21 => 'Spatie\\LaravelIgnition\\Solutions\\SolutionProviders\\UnknownMariadbCollationSolutionProvider',
     ),
     'ignored_solution_providers' => 
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back',
+    'remote_sites_path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
@@ -843,6 +854,21 @@
       3 => 'Spatie\\LaravelIgnition\\Recorders\\QueryRecorder\\QueryRecorder',
     ),
     'open_ai_key' => NULL,
+    'with_stack_frame_arguments' => true,
+    'argument_reducers' => 
+    array (
+      0 => 'Spatie\\Backtrace\\Arguments\\Reducers\\BaseTypeArgumentReducer',
+      1 => 'Spatie\\Backtrace\\Arguments\\Reducers\\ArrayArgumentReducer',
+      2 => 'Spatie\\Backtrace\\Arguments\\Reducers\\StdClassArgumentReducer',
+      3 => 'Spatie\\Backtrace\\Arguments\\Reducers\\EnumArgumentReducer',
+      4 => 'Spatie\\Backtrace\\Arguments\\Reducers\\ClosureArgumentReducer',
+      5 => 'Spatie\\Backtrace\\Arguments\\Reducers\\DateTimeArgumentReducer',
+      6 => 'Spatie\\Backtrace\\Arguments\\Reducers\\DateTimeZoneArgumentReducer',
+      7 => 'Spatie\\Backtrace\\Arguments\\Reducers\\SymphonyRequestArgumentReducer',
+      8 => 'Spatie\\LaravelIgnition\\ArgumentReducers\\ModelArgumentReducer',
+      9 => 'Spatie\\LaravelIgnition\\ArgumentReducers\\CollectionArgumentReducer',
+      10 => 'Spatie\\Backtrace\\Arguments\\Reducers\\StringableArgumentReducer',
+    ),
   ),
   'tinker' => 
   array (
