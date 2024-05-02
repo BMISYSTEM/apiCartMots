@@ -1,0 +1,26 @@
+alter table ingresos_egresos add COLUMN empresas bigint unsigned
+ALTER TABLE ingresos_egresos ADD CONSTRAINT empresas FOREIGN KEY(empresas) REFERENCES empresas(id);
+
+
+--creacion de asociaciones
+CREATE TABLE solicitud_asociaciones (
+	id INT NOT NULL AUTO_INCREMENT,
+  	empresa_solicitante bigint unsigned NOT NULL,
+	empresa_receptora bigint unsigned NOT NULL,
+	vehiculo BOOLEAN,
+	clientes BOOLEAN,
+  	updated_at TIMESTAMP,
+  	created_at TIMESTAMP,
+  	PRIMARY KEY (id),
+  	FOREIGN KEY (empresa_solicitante) REFERENCES empresas(id),
+  	FOREIGN KEY (empresa_receptora) REFERENCES empresas(id)
+)
+
+alter TABLE solicitud_asociaciones add COLUMN aceptado BOOLEAN DEFAULT 0
+
+alter TABLE solicitud_asociaciones add COLUMN rechazado BOOLEAN DEFAULT 0
+
+alter table empresas add column telefono int(15) DEFAULT 0
+
+--Se agrega el origen del cliente 
+alter table clientes add COLUMN origen int DEFAULT 0 
