@@ -46,7 +46,7 @@ class ActividadesImplement implements ActividadesInterface
     function findActividad($id): array
     {
         try {
-            $actividad = actividad::find($id);
+            $actividad = actividad::where('id',$id)->where('empresas',Auth::user()->empresas)->first();
             return ['succes' => $actividad];
         } catch (\Throwable $th) {
             return ['error' => 'Error inesperado en el servidro '.$th];
@@ -55,7 +55,7 @@ class ActividadesImplement implements ActividadesInterface
     function allActividad(): array
     {
         try {
-            $actividad = actividad::all();
+            $actividad = actividad::where('empresas',Auth::user()->empresas)->get();
             return ['succes' => $actividad ];
         } catch (\Throwable $th) {
             return ['error' => 'Error inesperado en el servidro '.$th];

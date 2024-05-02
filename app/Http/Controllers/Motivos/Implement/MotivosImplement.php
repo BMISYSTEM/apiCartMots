@@ -44,7 +44,7 @@ class MotivosImplement implements MotivosInterface
     function findMotivo($id): array
     {
         try {
-            $motivos = motivo::find($id);
+            $motivos = motivo::where('id',$id)->where('empresas',Auth::user()->empresas)->first();
             return ['succes'=>$motivos];
         } catch (\Throwable $th) {
             return ['error'=>'Error inesperado en el servidor error:'.$th];
@@ -53,7 +53,7 @@ class MotivosImplement implements MotivosInterface
     function allMotivo(): array
     {
         try {
-            $motivos = motivo::all();
+            $motivos = motivo::where('empresas',Auth::user()->empresas)->get();
             return ['succes'=>$motivos];
         } catch (\Throwable $th) {
             return ['error'=>'Error inesperado en el servidor error:'.$th];
