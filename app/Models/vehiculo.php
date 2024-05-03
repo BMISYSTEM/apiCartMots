@@ -28,6 +28,7 @@ class vehiculo extends Model
         'linea',
         'soat',
         'tecnomecanica',
+        'proveedor'
     ];
 
 

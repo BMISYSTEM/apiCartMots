@@ -48,7 +48,7 @@ class VehiculoImplement implements VehiculoInterface
                                 string $version, 
                                 string $linea, 
                                 string $soat, 
-                                string $tecnicomencanica): array
+                                string $tecnicomencanica,string $proveedor): array
     {
         try {
             $empresa = Auth::user()->empresas;
@@ -76,7 +76,8 @@ class VehiculoImplement implements VehiculoInterface
                     'linea'=>$linea,
                     'soat'=>$soat,
                     'tecnomecanica'=>$tecnicomencanica,
-                    'peritaje'=>''
+                    'peritaje'=>'',
+                    'proveedor'=>$proveedor
                 ]
             );
             return ['succes'=>'Se creo de forma exitosa el vehiculo'];
@@ -120,7 +121,7 @@ class VehiculoImplement implements VehiculoInterface
                                 string $version, 
                                 string $linea, 
                                 string $soat, 
-                                string $tecnicomencanica): array
+                                string $tecnicomencanica,string $proveedor): array
     {
         try {
             /**
@@ -144,6 +145,8 @@ class VehiculoImplement implements VehiculoInterface
             $vehiculo->linea = $linea;
             $vehiculo->soat = $soat;
             $vehiculo->tecnomecanica = $tecnicomencanica;
+            $vehiculo->proveedor = $proveedor;
+
             /**
              * Se guardan los campos anteriores
              */
@@ -220,11 +223,14 @@ class VehiculoImplement implements VehiculoInterface
                     v.tecnomecanica,
                     mar.nombre as marca_nombre,
                     m.year as model_nombre,
-                    e.estado as estado_nombre
+                    e.estado as estado_nombre,
+                    v.proveedor,
+                    p.nombre as nombre_proveedor
             FROM vehiculos v
             inner join modelos m on v.modelos = m.id
             inner join estados e on v.estados = e.id
             inner join marcas mar on v.marcas = mar.id
+            left join proveedors p on v.proveedor = p.id
             where v.empresas = '.$empresa.'  LIMIT '.$limit.' OFFSET '.$offset.' ');
             return [['succes'=>$vehiculos,'count'=>count($count)]];
         } catch (\Throwable $th) {

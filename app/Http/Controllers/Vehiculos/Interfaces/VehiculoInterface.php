@@ -41,7 +41,7 @@ interface VehiculoInterface
                                     string $version, 
                                     string $linea, 
                                     string $soat, 
-                                    string $tecnicomencanica): array;
+                                    string $tecnicomencanica,string $proveedor): array;
 
     /** Actualiza la informacion de un vehiculo
      * @param int $id_vehiculo
@@ -78,7 +78,7 @@ interface VehiculoInterface
                                     string $version, 
                                     string $linea, 
                                     string $soat, 
-                                    string $tecnicomencanica): array;
+                                    string $tecnicomencanica,string $proveedor): array;
 
     /** Elimina un vehiculo
      * @param int $id_vehiculo

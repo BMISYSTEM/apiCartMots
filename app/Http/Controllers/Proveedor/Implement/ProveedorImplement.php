@@ -37,8 +37,8 @@ class ProveedorImplement implements ProveedorInterface
             $proveedor->telefono = $telefono;
             $proveedor->telefono2 = $telefono2;
             $proveedor->email = $email;
+            $proveedor->direccion = $direccion;
             $proveedor->save();
-
             return ['succes'=>'Proveedor actualizado con exito'];
         } catch (\Throwable $th) {
             return ['error'=>'Error inesperado en el servidor error:'.$th];

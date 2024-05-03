@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Vehiculos\Implementacion\VehiculoImplement;
 use App\Http\Controllers\Vehiculos\Request\CreateVehiculoRequest;
 use App\Http\Controllers\Vehiculos\Request\UpdateVehiculoRequest;
+use App\Models\vehiculo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class VehiculoController extends Controller
 {
@@ -44,7 +47,8 @@ class VehiculoController extends Controller
             $request['version'],
             $request['linea'],
             $request['soat'],
-            $request['tecnicomecanica']
+            $request['tecnicomecanica'],
+            $request['proveedor'] ? $request['proveedor'] : null
         );
         // echo $request['tecnicomecanica'];
         return response()->json($estatus,array_key_exists('error',$estatus) ? 500 : 200);
@@ -66,7 +70,8 @@ class VehiculoController extends Controller
             $request['version'],
             $request['linea'],
             $request['soat'],
-            $request['tecnicomecanica']
+            $request['tecnicomecanica'],
+            $request['proveedor']
         );
         return response()->json($estatus,array_key_exists('error',$estatus) ? 500 : 200);
     }
@@ -118,6 +123,21 @@ class VehiculoController extends Controller
     {
         $estatus = $this->vehiculo->indexIntercompany();
         return response()->json($estatus,array_key_exists('error',$estatus) ? 500 : 200);
+    }
+
+    public function indexVehiculosProveedor(Request $request)
+    {   
+        $request = $request->validate(
+            [
+                'id_proveedor' => 'required',
+            ],
+            [
+                'id_proveedor.required' => 'El id del proveedor es obligatorio'
+            ]
+            );
+
+        $vehiculo = DB::select('Select * from vehiculos where proveedor='.$request['id_proveedor'].' and empresas='.Auth::user()->empresas);
+        return response()->json(['succes'=>$vehiculo]);
     }
 }
 

@@ -147,6 +147,8 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/indexintercompany',[VehiculoController::class,'indexIntercompany']);
     Route::post('/updateimagen',[VehiculoController::class,'updateImagenVehiculo']);
     Route::post('/agotarvehiculo',[VehiculoController::class,'agotarVehiculo']);
+    Route::post('/indexvehiculosproveedor',[VehiculoController::class,'indexVehiculosProveedor']);
+
      /*
     |--------------------------------------------------------------------------
     | Tienen que ver con la empresas

@@ -19,6 +19,7 @@ class UpdateVehiculoRequest
                 'linea' => 'required',
                 'soat' => 'required',
                 'tecnicomecanica' => 'required',
+                'proveedor'=>'nullable'
             ],
             [
                 'id_vehiculo.required'=>'El vehiculo es requerido',

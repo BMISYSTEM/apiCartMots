@@ -26,6 +26,7 @@ class CreateVehiculoRequest
                 'foto3' => 'required|max:5000|file|mimes:png,jpg',
                 'foto4' => 'required|max:5000|file|mimes:png,jpg',
                 'peritaje' => 'nullable',
+                'proveedor'=>'nullable'
             ],
             [
                 'marcas.required' => 'El campo marcas es obligatorio',
