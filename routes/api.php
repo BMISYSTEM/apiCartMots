@@ -18,6 +18,7 @@ use App\Http\Controllers\Motivos\MotivosController;
 use App\Http\Controllers\NotasController;
 use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\PasarelaController;
+use App\Http\Controllers\Proveedor\ProveedorController;
 use App\Http\Controllers\ResultadoController;
 use App\Http\Controllers\SetpdfController;
 use App\Http\Controllers\SolicitudCredito;
@@ -209,6 +210,19 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/deletemovimiento',[LogisticaController::class,'deleteMovimiento']);
     Route::post('/findmovimiento',[LogisticaController::class,'findMovimiento']);
     Route::get('/allmovimiento',[LogisticaController::class,'allMovimientos']);
+    /*
+    |--------------------------------------------------------------------------
+    | proveedor 
+    |--------------------------------------------------------------------------
+    |
+    | create,consulta todas las movimientos 
+    |
+    */
+    Route::post('/createproveedor',[ProveedorController::class,'createProveedor']);
+    Route::post('/updateproveedor',[ProveedorController::class,'updateProveedor']);
+    Route::post('/deleteproveedor',[ProveedorController::class,'deleteProveedor']);
+    Route::post('/findproveedor',[ProveedorController::class,'findProveedor']);
+    Route::get('/allproveedor',[ProveedorController::class,'allProveedor']);
 });
 
 

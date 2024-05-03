@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Proveedor\Implement\ProveedorImplement;
 use App\Http\Controllers\Vehiculos\Controller\VehiculoController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProveedorController extends Controller
 {
@@ -51,7 +52,7 @@ class ProveedorController extends Controller
         // validar
         $request = $request->validate(
             [
-                'id_proveedor' => 'required',
+                'id_proveedor' => 'required|exists:proveedors,id,empresas,'. Auth::user()->empresas,
                 'nombre' => 'required',
                 'cedula' => 'required',
                 'apellido' => 'required',
@@ -81,7 +82,7 @@ class ProveedorController extends Controller
         // validar
         $request = $request->validate(
             [
-                'id_proveedor' => 'required',
+                'id_proveedor' => 'required|exists:proveedors,id',
             ],
             [
                 'id_proveedor.required' => 'El id del proveedor es obligatorio',
@@ -97,7 +98,7 @@ class ProveedorController extends Controller
         // validar
         $request = $request->validate(
             [
-                'id_proveedor' => 'required',
+                'id_proveedor' => 'required|exists:proveedors,id',
             ],
             [
                 'id_proveedor.required' => 'El id del proveedor es obligatorio',

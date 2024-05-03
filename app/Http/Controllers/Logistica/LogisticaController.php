@@ -55,26 +55,26 @@ class LogisticaController extends Controller
 
         $request = $request->validate(
             [
-                'id_movimiento'=>'required|exists:logisticas,id,empresas,'.$empresa,
+                'id'=>'required|exists:logisticas,id,empresas,'.$empresa,
                 'placa'=>'required|exists:vehiculos,placa,empresas,'.$empresa,
-                'actividad'=>'required|exists:actividads,id,empresas,'.$empresa,
-                'motivo'=>'required|exists:motivos,id,empresas,'.$empresa,
+                'actividads'=>'required|exists:actividads,id,empresas,'.$empresa,
+                'motivos'=>'required|exists:motivos,id,empresas,'.$empresa,
                 'fecha'=>'required|date|date_format:Y-m-d H:i:s',
-                'valor'=>'required',
+                'Valor'=>'required',
                 'finalizado'=>'required'
             ],
             [
-                'id_movimiento.required'=>'el id del movimiento obligatoria',
+                'id.required'=>'el id del movimiento obligatoria',
                 'placa.required'=>'La placa es obligatoria',
                 'placa.exists' => 'La palca ingresada no existe',
-                'actividad.required'=>'La actividad es obligatoria',
+                'actividads.required'=>'La actividad es obligatoria',
                 'motivo.required'=>'El motivo es obligatoria ',
                 'fecha.required'=>'La fecha es obligatoria',
-                'valor.required'=>'El valor es obligatorio',
+                'Valor.required'=>'El valor es obligatorio',
                 'finalizado.required'=>'El estado es obligatorio',
             ]
         );
-        $estatus = $this->logistica->updateMovimiento($request['id_movimiento'],$request['placa'],$request['actividad'],$request['motivo'],$request['fecha'],$request['valor'],$request['finalizado']);
+        $estatus = $this->logistica->updateMovimiento($request['id'],$request['placa'],$request['actividads'],$request['motivos'],$request['fecha'],$request['Valor'],$request['finalizado']);
         // $estatus = ['succes'=>true];
 
         // respuesta
