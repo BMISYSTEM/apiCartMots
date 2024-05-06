@@ -197,7 +197,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -372,13 +372,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\app',
+        'root' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\app/public',
+        'root' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\app/public',
         'url' => 'https://public.cartmots.com//storage',
         'visibility' => 'public',
         'throw' => false,
@@ -398,7 +398,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\public\\storage' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\app/public',
+      'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\public\\storage' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -437,14 +437,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -509,7 +509,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -576,7 +576,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -688,7 +688,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -708,9 +708,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\resources\\views',
+      0 => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\resources\\views',
     ),
-    'compiled' => false,
+    'compiled' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\framework\\views',
   ),
   'dompdf' => 
   array (
@@ -719,10 +719,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\fonts',
-      'font_cache' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\BAYRON~1.MEN\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots',
+      'font_dir' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\fonts',
+      'font_cache' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\bairo\\AppData\\Local\\Temp',
+      'chroot' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -842,7 +842,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\Users\\bayron.meneses\\Desktop\\apiCartMots',
+    'remote_sites_path' => 'C:\\Users\\bairo\\OneDrive\\Escritorio\\carmot-back',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
