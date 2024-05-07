@@ -225,12 +225,17 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/deleteproveedor',[ProveedorController::class,'deleteProveedor']);
     Route::post('/findproveedor',[ProveedorController::class,'findProveedor']);
     Route::get('/allproveedor',[ProveedorController::class,'allProveedor']);
-});
 
+    // pago de mercado pago
 
-
-
-
+    Route::post('/preferences',[PasarelaController::class,'preferences']);
+  });
+  
+  
+  
+  
+  
+Route::get('/notificacionpago',[PasarelaController::class,'notificacionPago']);
 Route::post('/codigo/empresa',[Authcontroller::class,'codigoempresa']);
 Route::post('/empresa/registro',[Authcontroller::class,'registroempresa']);
 Route::post('/login',[Authcontroller::class,'login']);
@@ -244,4 +249,3 @@ Route::get('/bot/chat',[botController::class,'find']);
 Route::get('/bot/chat/consulta',[botController::class,'consulta']);
 Route::post('/bot/chat/save',[botController::class,'savechat']);
 // pasarela de pagos
-Route::get('/preferences',[PasarelaController::class,'preferences']);
